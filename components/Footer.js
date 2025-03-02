@@ -12,12 +12,12 @@ export default async function Footer() {
   }
 
   return (
-    <footer className='flex flex-col md:flex-row gap-4 md:gap-16 px-8 py-12 md:items-center border-t border-t-primary'>
+    <footer className='flex flex-col md:flex-row gap-4 md:gap-16 px-8 py-12 md:items-center border-t border-t-primary mt-16'>
       <div className='grid gap-4'>
         {/* Link logo to frontpage */}
         <Link href={`/`}>
-          <ImageComponent className="h-32 w-auto" image={footer.logo} />
-        </Link>
+            <ImageComponent className="h-8 md:h-12 w-auto" image={footer.logo} />
+         </Link>
       </div>
       <Navigation navigationId={footer.navigationId} />
     </footer>

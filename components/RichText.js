@@ -7,10 +7,14 @@ export default async function Richtext({ richText }) {
       return null;
     }
   
+    const options = {
+      preserveWhitespace: true,
+    };
+
     return (
       <>
-        <div className='prose mx-auto p-4 md:p-8'>
-          {documentToReactComponents(richText.json)}
+        <div className='prose mx-auto w-full'>
+          {documentToReactComponents(richText.json, options)}
         </div>
       </>
     );

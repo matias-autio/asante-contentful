@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    trailingSlash: true,
-    output: 'export',
+    // trailingSlash: true,
+    // output: 'export',
     images: {
         remotePatterns: [
           {
@@ -11,7 +11,7 @@ const nextConfig = {
             search: '',
           },
         ],
-        unoptimized: true,
+        // unoptimized: true,
       },
 };
 

@@ -10,7 +10,7 @@ export default async function Components({components}) {
   }
 
   return (
-    <>
+    <div className='grid gap-16 px-8'>
       {components.map((component) => {
         switch (component.__typename) {
           case "Hero":
@@ -23,7 +23,7 @@ export default async function Components({components}) {
             return null;
         }
       })}
-    </>
+    </div>
   );
 }
 
