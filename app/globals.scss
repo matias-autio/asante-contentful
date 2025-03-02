@@ -2,10 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .grid-template-areas-center {
+      grid-template-areas: "center";
+  }
+
+  .grid-area-center {
+      grid-area: center;
+  }
+}
+
+
 :root {
   --primary: #30414d;
   --secondary: #759aaa;
   --tertiary: #cccccc;
+  --yellow: #FAF5E5;
   --font-size-h1: 2.986rem;
   --font-size-h2: 2.488rem;
   --font-size-h3: 2.074rem;
@@ -17,21 +29,10 @@
   --font-size-hero: 2.986rem;
 }
 
-.hero {
-  display: grid;
-  grid-template-areas: "hero";
-  align-items: center;
-
-  > * {
-    grid-area: hero;
-  }
-
-  .hero__content {
-    line-height: 1.1;
-    margin-left: 5%;
-    max-width: min(50ch, 40%);
-    min-width: 30ch;
-  }
+.hero__content {
+  line-height: 1.2;
+  max-width: 70ch;
+  min-width: 30ch;
 }
 
 .prose {

@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./globals.scss";
 import Header from '@/components/Header';
 import Footer from "@/components/Footer";
 import getSiteSettings from "@/lib/api/getSiteSettings";
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       <head>
       </head>
       <body
-        className={`${serif.variable} ${sans.variable} antialiased`}
+        className={`${serif.variable} ${sans.variable} antialiased bg-yellow`}
       >
         <div className="container mx-auto">
           <Header />

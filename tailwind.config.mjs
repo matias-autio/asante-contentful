@@ -50,11 +50,17 @@ export default {
         },
       }),
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+        },
+        tertiary: {
+          DEFAULT: "var(--tertiary)",
+        },
+        yellow: {
+          DEFAULT: "var(--yellow)",
         },
       },
       fontFamily: {
