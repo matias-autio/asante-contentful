@@ -1,0 +1,30 @@
+steps:
+- name: 'node:22.14.0'
+  id: Node build
+  entrypoint: bash
+  args:
+      - -c
+      - |
+        npm ci
+        npm run build
+  secretEnv: ["CONTENTFUL_ACCESS_TOKEN", "CONTENTFUL_SPACE_ID"]
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: Empty bucket
+  args: ['gcloud', 'storage', 'rm', '--recursive', 'gs://client-kkv-kriisisivusto/*']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: Copy out directory to Google bucket
+  args: ['gcloud', 'storage', 'cp', '--recursive', './out/*', 'gs://client-kkv-kriisisivusto/']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: Invalidate CDN cache
+  args: ['gcloud', 'compute', 'url-maps', 'invalidate-cdn-cache', 'lb', '--async', '--path=/*']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: List CDN cache invalidates
+  args: ['gcloud', 'compute', 'url-maps', 'list-cdn-cache-invalidations', 'lb', '--global']
+options:
+  logging: CLOUD_LOGGING_ONLY
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_ID/secrets/CONTENTFUL_ACCESS_TOKEN/versions/latest
+    env: 'CONTENTFUL_ACCESS_TOKEN'
+  - versionName: projects/$PROJECT_ID/secrets/CONTENTFUL_SPACE_ID/versions/latest
+    env: 'CONTENTFUL_SPACE_ID'
