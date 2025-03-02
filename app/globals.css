@@ -35,7 +35,7 @@
 }
 
 .prose {
-  max-width: 80ch;
+  /* max-width: 80ch; */
 
   --tw-prose-body: var(--primary);
   --tw-prose-headings: var(--primary);

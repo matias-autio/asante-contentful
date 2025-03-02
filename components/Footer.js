@@ -17,7 +17,7 @@ export default async function Footer() {
         {/* Link logo to frontpage */}
         <Link href={`/`}>
             <ImageComponent className="h-8 md:h-12 w-auto" image={footer.logo} />
-         </Link>
+        </Link>
       </div>
       <Navigation navigationId={footer.navigationId} />
     </footer>
