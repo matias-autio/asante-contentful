@@ -2,6 +2,20 @@ import "./globals.css";
 import Header from '@/components/Header';
 import Footer from "@/components/Footer";
 import getSiteSettings from "@/lib/api/getSiteSettings";
+import { IBM_Plex_Serif, DM_Sans } from 'next/font/google'
+
+const serif = IBM_Plex_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400'],
+  variable: '--font-serif',
+})
+ 
+const sans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+})
 
 export async function generateMetadata() {
 
@@ -15,16 +29,12 @@ export async function generateMetadata() {
 
 export default function RootLayout({ children }) {
 
-  const typekitUrl = "https://use.typekit.net/vhf8wzz.css";
-
   return (
     <html lang="en">
       <head>
-        <link rel="preload" href={typekitUrl} as="style" />
-        <link rel="stylesheet" href={typekitUrl} />
       </head>
       <body
-        className="antialiased"
+        className={`${serif.variable} ${sans.variable} antialiased`}
       >
         <div className="container mx-auto">
           <Header />

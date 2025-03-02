@@ -39,15 +39,10 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div className='container mx-auto'>
-      <div className='prose mx-auto p-8'>
-        <main>
-          <h1>{page.title}</h1>
-        </main>
-        <article>
-          <Components components={components} />
-        </article>
-      </div>
+    <div>
+      <main>
+        <Components components={components} />
+      </main>
     </div>
   );
 }

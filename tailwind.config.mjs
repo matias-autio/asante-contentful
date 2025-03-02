@@ -15,6 +15,21 @@ export default {
           foreground: "var(--primary-foreground)",
         },
       },
+      fontFamily: {
+        serif: ['var(--font-serif)'],
+        sans: ['var(--font-sans)'],
+        // mono: ['var(--font-mono)'],
+      },
+      fontSize: {
+        h1: "var(--font-size-h1)",
+        h2: "var(--font-size-h2)",
+        h3: "var(--font-size-h3)",
+        lead: "var(--font-size-lead)",
+        hero: "var(--font-size-hero)",
+        p: "var(--font-size-p)",
+        caption: "var(--font-size-caption)",
+        small: "var(--font-size-small)",
+      },
     },
   },
   plugins: [

@@ -16,7 +16,7 @@ export default async function Footer() {
       <div className='grid gap-4'>
         {/* Link logo to frontpage */}
         <Link href={`/`}>
-          <ImageComponent className="h-8 w-auto" image={footer.logo} />
+          <ImageComponent className="h-32 w-auto" image={footer.logo} />
         </Link>
       </div>
       <Navigation navigationId={footer.navigationId} />

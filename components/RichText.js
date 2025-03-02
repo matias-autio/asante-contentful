@@ -9,7 +9,9 @@ export default async function Richtext({ richText }) {
   
     return (
       <>
-        {documentToReactComponents(richText.json)}
+        <div className='prose mx-auto p-4 md:p-8'>
+          {documentToReactComponents(richText.json)}
+        </div>
       </>
     );
   }

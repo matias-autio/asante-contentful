@@ -28,17 +28,14 @@ export default async function Home() {
 
   const componentIds = frontPage?.componentsCollection?.items.map(c => c.sys.id) || [];
   const components = await getComponentsByIds(componentIds);
+  
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('Components:', components);
+  }
 
   return (
-    <div className='container mx-auto'>
-      <div className='prose mx-auto p-4 md:p-8'>
-        <main>
-          <h1>{frontPage.title}</h1>
-        </main>
-        <article>
-          <Components components={components} />
-        </article>
-      </div>
-    </div>
+    <main>
+      <Components components={components} />        
+    </main>
   );
 }
