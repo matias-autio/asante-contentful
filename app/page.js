@@ -1,4 +1,3 @@
-import getComponentsByIds from '@/lib/api/getComponentsByIds';
 import getPageBySlug from '@/lib/api/getPageBySlug';
 import getSiteSettings from "@/lib/api/getSiteSettings";
 import Components from '@/components/Components';
@@ -26,9 +25,8 @@ export default async function Home() {
     notFound();
   }
 
-  const componentIds = frontPage?.componentsCollection?.items.map(c => c.sys.id) || [];
-  const components = await getComponentsByIds(componentIds);
-  
+  const components = frontPage?.componentsCollection.items;
+
   if (process.env.NODE_ENV !== 'production') {
     console.log('Components:', components);
   }

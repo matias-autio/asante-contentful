@@ -30,8 +30,7 @@ export default async function Page({ params }) {
   const { slug } = await params;
   // Fetch page data based on slug
   const page = await getPageBySlug(slug);
-  const componentIds = page?.componentsCollection?.items.map(c => c.sys.id) || [];
-  const components = await getComponentsByIds(componentIds);
+  const components = page?.componentsCollection.items;
 
   // Handle 404 if page doesn't exist
   if (!page) {
