@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 export default async function Gallery(props) {
 
-  console.log(props);
-
   return (
     <>
       <div>
@@ -18,6 +16,7 @@ export default async function Gallery(props) {
                   width={image.width}
                   height={image.height}
                   alt={image.description}
+                  sizes="512px"
                 />
               </div>
             ))}
