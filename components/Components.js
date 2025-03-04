@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import ImageComponent from '@/components/ImageComponent';
 import RichText from '@/components/RichText';
 import Persons from '@/components/Persons';
+import Gallery from '@/components/Gallery';
 
 // Render components by their __typename
 export default async function Components({components}) {
@@ -22,6 +23,8 @@ export default async function Components({components}) {
             return <RichText key={component.sys.id} richText={component.richText} />;
           case "Persons":
             return <Persons key={component.sys.id} persons={component.personsCollection.items} title={component.title} />;
+          case "Gallery":
+            return <Gallery key={component.sys.id} images={component.imagesCollection.items} title={component.title} />;
           default:
             return null;
         }
