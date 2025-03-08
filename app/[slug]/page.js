@@ -1,4 +1,3 @@
-import getComponentsByIds from '@/lib/api/getComponentsByIds';
 import getPageBySlug from '@/lib/api/getPageBySlug';
 import getSiteSettings from '@/lib/api/getSiteSettings';
 import getAllPages from '@/lib/api/getAllPages';
