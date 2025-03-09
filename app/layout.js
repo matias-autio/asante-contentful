@@ -10,7 +10,7 @@ const serif = IBM_Plex_Serif({
   weight: ['400'],
   variable: '--font-serif',
 })
- 
+
 const sans = DM_Sans({
   subsets: ['latin'],
   display: 'swap',
