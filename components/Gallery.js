@@ -1,7 +1,7 @@
 "use client"
 
-import RenderLightboxImage from "./helpers/RenderLightboxImage";
 import RenderGalleryImage from "./helpers/RenderGalleryImage";
+import RenderLightboxImage from "./helpers/RenderLightboxImage";
 
 import { useState } from "react";
 
@@ -17,10 +17,6 @@ import "yet-another-react-lightbox/styles.css";
 // import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 // import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-
-// import photos from "@/components/helpers/photos";
-
-
 
 export default function Gallery(props) {
   const [index, setIndex] = useState(-1);
