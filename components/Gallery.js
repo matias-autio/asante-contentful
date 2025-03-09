@@ -1,7 +1,7 @@
 "use client"
 
-import RenderGalleryImage from "./helpers/RenderGalleryImage";
-import RenderLightboxImage from "./helpers/RenderLightboxImage";
+import RenderGalleryImage from "./helpers/RenderGalleryImagee";
+import RenderLightboxImage from "./helpers/RenderLightboxImagee";
 
 import { useState } from "react";
 
