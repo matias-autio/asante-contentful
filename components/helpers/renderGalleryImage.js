@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function renderGalleryImage(
+export default function RenderGalleryImage(
   { alt = "", title, sizes },
   { photo, width, height },
 ) {

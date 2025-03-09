@@ -1,7 +1,7 @@
 "use client"
 
-import renderLightboxImage from "./helpers/renderLightboxImage";
-import renderGalleryImage from "./helpers/renderGalleryImage";
+import RenderLightboxImage from "./helpers/RenderLightboxImage";
+import RenderGalleryImage from "./helpers/RenderGalleryImage";
 
 import { useState } from "react";
 
@@ -39,7 +39,7 @@ export default function Gallery(props) {
 
       <RowsPhotoAlbum
         photos={photos}
-        render={{ image: renderGalleryImage }}
+        render={{ image: RenderGalleryImage }}
         targetRowHeight={150}
         defaultContainerWidth={1200}
         onClick={({ index }) => setIndex(index)}
@@ -50,7 +50,7 @@ export default function Gallery(props) {
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}
-        render={{ slide: renderLightboxImage }}
+        render={{ slide: RenderLightboxImage }}
       // enable optional lightbox plugins
       // plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
       />
