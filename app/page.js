@@ -33,7 +33,7 @@ export default async function Home() {
 
   return (
     <main>
-      <Components components={components} />        
+      <Components components={components} />
     </main>
   );
 }

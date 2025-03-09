@@ -10,6 +10,9 @@ const nextConfig = {
             port: '',
             search: '',
           },
+          {
+            hostname: 'assets.react-photo-album.com',
+          },
         ],
         // unoptimized: true,
       },
