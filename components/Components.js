@@ -3,6 +3,7 @@ import ImageComponent from '@/components/ImageComponent';
 import RichText from '@/components/RichText';
 import Persons from '@/components/Persons';
 import Gallery from '@/components/Gallery';
+import Embed from '@/components/Embed';
 
 // Render components by their __typename
 export default async function Components({components}) {
@@ -21,6 +22,8 @@ export default async function Components({components}) {
             return <ImageComponent key={component.sys.id} image={component.image} />;
           case "ContentTypeRichText":
             return <RichText key={component.sys.id} richText={component.richText} />;
+          case "Embed":
+            return <Embed key={component.sys.id} html={component.html} />;
           case "Persons":
             return <Persons key={component.sys.id} persons={component.personsCollection.items} title={component.title} />;
           case "Gallery":
