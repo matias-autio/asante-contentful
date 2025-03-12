@@ -6,6 +6,7 @@ export default async function ImageComponent(props) {
     const image = props.image;
     const className = props.className;
     const sizes = props.sizes;
+    const loading = props.loading;
   
     if (!image) {
       return null;
@@ -19,6 +20,7 @@ export default async function ImageComponent(props) {
         width={image.width}
         height={image.height}
         alt={image.description}
+        loading={loading}
       />
     );
   }
