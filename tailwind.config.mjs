@@ -26,18 +26,23 @@ export default {
             },
             h1: {
               fontSize: "var(--font-size-h1)",
+              lineHeight: "var(--line-height-h1)",
             },
             h2: {
               fontSize: "var(--font-size-h2)",
+              lineHeight: "var(--line-height-h2)",
             },
             h3: {
               fontSize: "var(--font-size-h3)",
+              lineHeight: "var(--line-height-h3)",
             },
             h4: {
               fontSize: "var(--font-size-h4)",
+              lineHeight: "var(--line-height-h4)",
             },
             h5: {
               fontSize: "var(--font-size-h5)",
+              lineHeight: "var(--line-height-h5)",
             },
             figcaption: {
               "padding-inline": "1rem",
