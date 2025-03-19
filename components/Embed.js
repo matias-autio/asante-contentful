@@ -7,7 +7,7 @@ export default async function Embed({ html }) {
     return (
       <>
         <hr className="border-tertiary"></hr>
-        <div className="max-w-screen-sm mx-auto prose" dangerouslySetInnerHTML={{ __html: html }} />;
+        <div className="max-w-screen-sm mx-auto prose" dangerouslySetInnerHTML={{ __html: html }} />
       </>
     );
   }
