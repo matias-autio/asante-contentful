@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${serif.variable} ${sans.variable} antialiased bg-yellow`}
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-screen-lg">
           <Header />
           {children}
           <Footer />

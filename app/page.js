@@ -20,7 +20,7 @@ export default async function Home() {
 
   const frontPage = await getPageBySlug("home");
 
-  // Handle 404 if page with the slug '/' doesn't exist
+  // Handle 404 if page with the slug 'home' doesn't exist
   if (!frontPage) {
     notFound();
   }
