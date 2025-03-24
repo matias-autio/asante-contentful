@@ -21,9 +21,9 @@ export default async function Components({components}) {
           case "Image":
             return <ImageComponent key={component.sys.id} image={component.image} />;
           case "ContentTypeRichText":
-            return <RichText key={component.sys.id} richText={component.richText} />;
+            return <RichText key={component.sys.id} anchor={component.anchor} richText={component.richText} />;
           case "Embed":
-            return <Embed key={component.sys.id} html={component.html} />;
+            return <Embed key={component.sys.id} anchor={component.anchor} html={component.html} />;
           case "Persons":
             return <Persons key={component.sys.id} persons={component.personsCollection.items} title={component.title} />;
           case "Gallery":
