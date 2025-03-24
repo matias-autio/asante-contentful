@@ -1,4 +1,4 @@
-export default async function Embed({ html }) {
+export default async function Embed({ html, anchor }) {
 
     if (!html){
       return null;
@@ -7,7 +7,7 @@ export default async function Embed({ html }) {
     return (
       <>
         <hr className="border-tertiary"></hr>
-        <div className="max-w-screen-sm mx-auto prose" dangerouslySetInnerHTML={{ __html: html }} />
+        <div id={anchor} className="max-w-screen-sm mx-auto prose" dangerouslySetInnerHTML={{ __html: html }} />
       </>
     );
   }

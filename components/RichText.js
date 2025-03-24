@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 // Render rich text using rich-text-react-renderer
 // https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
-export default async function Richtext({ richText }) {
+export default async function Richtext({ richText, anchor }) {
 
     if (!richText){
       return null;
@@ -14,7 +14,7 @@ export default async function Richtext({ richText }) {
 
     return (
       <>
-        <div className='prose mx-auto w-full'>
+        <div id={anchor} className='prose mx-auto w-full'>
           {documentToReactComponents(richText.json, options)}
         </div>
       </>
