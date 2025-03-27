@@ -12,7 +12,7 @@ export default async function Header() {
   }
 
   return (
-    <header className='flex flex-col md:flex-row gap-8 lg:gap-16 px-4 md:px-8 py-8 md:py-12 md:items-center justify-between'>
+    <header className='flex flex-col md:flex-row gap-8 lg:gap-16 px-4 md:px-8 py-8 md:py-12 md:items-end justify-between'>
       <div className='grid gap-4'>
         {/* Link logo to frontpage */}
         <Link aria-label="Home" href={`/`}>
